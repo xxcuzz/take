@@ -19,30 +19,41 @@
   <header>
     <div class="container">
       <div class="logo">
-        <a href="#" class="menu-btn">
-          <span class="circle_inner"></span>
-        </a>
-        <h1>take</h1>
-        <div id="sidebar" onclick="openMenu()">
-          <span>
-            <ul id="lil_list">
-              <li><a href="/">Menu</a></li>
-              <li><a href="/">Start</a></li>
-              <li><a href="/">Details</a></li>
-              <li><a href="/">Buy</a></li>
-              <li><a href="/">About Us</a></li>
-            </ul>
+        <a href="#" id="menu-btn">
+          <span id="circle_inner">
+            <div class="dot" id="dot1"></div>
+            <div class="dot" id="dot2"></div>
+            <div class="dot" id="dot3"></div>
+            <div class="dot" id="dot4"></div>
           </span>
+
+        </a>
+
+        <div id="sidebar" onclick="openMenu()">
+          <h1 id="take" class="animation">take</h1>
+          <ul id="lil_list">
+            <li><a href="/">menu</a></li>
+            <li><a href="/">start</a></li>
+            <li><a href="/">details</a></li>
+            <li><a href="/">buy</a></li>
+            <li><a href="/">about us</a></li>
+          </ul>
         </div>
 
         <script>
           function openMenu() {
+            document.getElementById('take').classList.toggle('active');
+            document.getElementById('menu-btn').classList.toggle('active');
+            document.getElementById('circle_inner').classList.toggle('active');
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('lil_list').classList.toggle('active');
+            document.getElementById('dot1').classList.toggle('active');
+            document.getElementById('dot2').classList.toggle('active');
+            document.getElementById('dot3').classList.toggle('active');
+            document.getElementById('dot4').classList.toggle('active');
           }
 
-          function open2(){
-          }
+          function open2() {}
         </script>
 
       </div>
