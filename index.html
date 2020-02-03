@@ -9,7 +9,10 @@
 
   <!-- Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400i,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
 
+
+  <!--jQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <title>take</title>
@@ -17,15 +20,16 @@
 
 <body>
   <header>
-    <div class="container">
+    <div class="container" id="container_logo">
+
       <div class="logo">
         <a href="#" id="menu-btn">
-          <span id="circle_inner">
+          <div id="circle_inner">
             <div class="dot" id="dot1"></div>
             <div class="dot" id="dot2"></div>
             <div class="dot" id="dot3"></div>
             <div class="dot" id="dot4"></div>
-          </span>
+          </div>
 
         </a>
 
@@ -52,14 +56,37 @@
             document.getElementById('dot3').classList.toggle('active');
             document.getElementById('dot4').classList.toggle('active');
           }
-
-          function open2() {}
         </script>
 
       </div>
-      <h2></h2>
-      <h3></h3>
     </div>
+  </header>
+  <div class="intro">
+    <div class="container" id='container_header'>
+      <div class="header_text">
+        <h2>Picture Perfect</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <img src="./images/IPhone.png" class="iphone_image" alt="IPhone">
+  <script>
+    var clientW = $(window).width();
+    var clientH = $(window).height();
+    var scale = 0.36;
+    $('.iphone_image').width(clientW*scale);
+    $('.iphone_image').height(clientH*0.95);
+    $(window).resize(function() {
+      var curW = $(this).width();
+      var curH = $(this).height();
+      $('.iphone_image').width(curW*scale);
+      $('.iphone_image').height(curH*0.95);
+    });
+  </script>
 </body>
 
 </html>
