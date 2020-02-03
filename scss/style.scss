@@ -16,6 +16,16 @@ h6 {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -27,8 +37,6 @@ header {
   background-size: cover;
   height: 100vh;
 }
-
-
 @mixin circle_style {
   border-radius: 50%;
   background-color: transporent;
@@ -36,16 +44,70 @@ header {
   border-style: solid;
 }
 
-.menu-btn  {
+.menu-btn {
   margin-top: 55px;
   float: left;
-
   position: relative;
   width: 35px;
   height: 35px;
-
   @include circle_style;
   border-width: 3px;
+}
+
+#sidebar {
+  position: absolute;
+  top: 55px;
+
+  width: 41px;
+  height: 41px;
+  background: black;
+  border-radius: 20px;
+  opacity: 0.6;
+  font-family: 'Merriweather', serif;
+  mix-blend-mode:overlay;
+}
+
+#sidebar.active{
+  width: 200px;
+  height: 200px;
+  transition-property: width, height;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+  transition-delay: 0s, .5s;
+}
+
+#lil_list>li.active {
+
+}
+
+#lil_list{
+  display: none;
+  opacity: 0;
+}
+
+#lil_list.active {
+    color: white;
+    display: block;
+    li:first-child{
+      font-weight: 900;
+      padding-left:66px;
+      padding-top: 7px;
+      margin-bottom: 16px;
+      font-size: 21px;
+    }
+    li:not(:first-child) {
+      font-size: 16px;
+      padding-left: 25px;
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+animation:opacity 0.5s;
+animation-delay: 1s;
+}
+@keyframes opacity{
+  from{opacity: 0;}
+  to {opacity: 1;}
 }
 
 .circle_inner {
@@ -55,7 +117,6 @@ header {
   transform: translate(-50%, -50%);
   width: 9px;
   height: 9px;
-
   @include circle_style;
   border-width: 2px;
 }
@@ -65,7 +126,6 @@ header h1 {
   font-size: 21px;
   font-family: 'Merriweather', serif;
   color: white;
-
   padding-top: 62px;
   padding-left: 10px;
 }
