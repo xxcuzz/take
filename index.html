@@ -46,16 +46,11 @@
 
         <script>
           function openMenu() {
-            document.getElementById('take').classList.toggle('active');
-            document.getElementById('menu-btn').classList.toggle('active');
-            document.getElementById('circle_inner').classList.toggle('active');
-            document.getElementById('sidebar').classList.toggle('active');
-            document.getElementById('lil_list').classList.toggle('active');
-            document.getElementById('dot1').classList.toggle('active');
-            document.getElementById('dot2').classList.toggle('active');
-            document.getElementById('dot3').classList.toggle('active');
-            document.getElementById('dot4').classList.toggle('active');
-          }
+            var ids = ['take', 'menu-btn', 'circle_inner', 'sidebar', 'lil_list', 'dot1', 'dot2', 'dot3', 'dot4'];
+            ids.forEach(function(val1, val2, ids) {
+              document.getElementById(val1).classList.toggle('active');
+            });
+          };
         </script>
 
       </div>
@@ -67,24 +62,22 @@
         <h2>Picture Perfect</h2>
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
       </div>
-
     </div>
-
-
-
   </div>
+
   <img src="./images/IPhone.png" class="iphone_image" alt="IPhone">
+
   <script>
     var clientW = $(window).width();
     var clientH = $(window).height();
-    var scale = 0.36;
-    $('.iphone_image').width(clientW*scale);
-    $('.iphone_image').height(clientH*0.95);
+    var scale = 0.41;
+    $('.iphone_image').width(clientW * scale);
+    $('.iphone_image').height(clientH * 0.95);
     $(window).resize(function() {
       var curW = $(this).width();
       var curH = $(this).height();
-      $('.iphone_image').width(curW*scale);
-      $('.iphone_image').height(curH*0.95);
+      $('.iphone_image').width(curW * scale);
+      $('.iphone_image').height(curH * 0.95);
     });
   </script>
 </body>
