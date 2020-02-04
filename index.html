@@ -67,12 +67,25 @@
 
   <img src="./images/IPhone.png" class="iphone_image" alt="IPhone">
 
+  <div class="clipper">
+      <div class="clipper_inner">      
+      </div>
+  </div>
+
+
   <script>
     var clientW = $(window).width();
     var clientH = $(window).height();
+
     var scale = 0.41;
+    var scale_wallpaper = 0.2;
+
     $('.iphone_image').width(clientW * scale);
     $('.iphone_image').height(clientH * 0.95);
+
+    $('.perspective').width(clientW * scale_wallpaper);
+    $('.perspective').height(clientH * 0.665);
+
     $(window).resize(function() {
       var curW = $(this).width();
       var curH = $(this).height();
