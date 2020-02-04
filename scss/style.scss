@@ -265,41 +265,31 @@ header {
   font-weight: 400;
 }
 
+.vertical_text {
+  width: 140px;
+  height: 41px;
+  display: flex;
+  justify-content: space-between;
+  transform: rotate(-90deg);
+  font-size: 0.7vw;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.vertical_text:first-child {
+  font-weight: 300;
+}
+
+.vertical_text>:nth-child(2){
+  font-weight: 600;
+}
+
 .iphone_image {
   position: absolute;
-  right: 13%;
+  right: 15%;
   bottom: -25%;
-}
-
-.iphone_wallpaper {
-  height: 500px;
-  width: 262px;
-
-  position: absolute;
-  left: -20px;
-
-
-}
-
-.clipper {
-
-  transform: skewY(11deg);
-  opacity: 0.5;
-  position: absolute;
-  left: 68.5%;
-  bottom:-15.5%;
-  width:232px;
-  height:520px;
-  clip: rect(-25px 232px 500px 0px);
-}
-
-.clipper_inner {
-  background: url("../images/phone_wallpaper.jpg") center no-repeat;
-  background-size: cover;
-  position: absolute;
-  top:-42px;
-  transform: skewY(-9.5deg);
-  clip: rect(0px 262px 497px 0px);
-  width:232px;
-  height:520px;
 }

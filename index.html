@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="container" id="container_logo">
 
@@ -57,40 +58,39 @@
     </div>
   </header>
   <div class="intro">
+    <div class="vertical_text">
+        <p>PERFECT </p>
+        <p>TAKPAPP.COM</p>
+      </div>
     <div class="container" id='container_header'>
       <div class="header_text">
         <h2>Picture Perfect</h2>
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+
       </div>
     </div>
   </div>
 
   <img src="./images/IPhone.png" class="iphone_image" alt="IPhone">
 
-  <div class="clipper">
-      <div class="clipper_inner">      
-      </div>
-  </div>
-
-
   <script>
     var clientW = $(window).width();
     var clientH = $(window).height();
 
-    var scale = 0.41;
-    var scale_wallpaper = 0.2;
-
-    $('.iphone_image').width(clientW * scale);
+    $('.iphone_image').width(clientW * 0.41);
     $('.iphone_image').height(clientH * 0.95);
 
-    $('.perspective').width(clientW * scale_wallpaper);
-    $('.perspective').height(clientH * 0.665);
+    $('.clipper').width(clientW * 0.7);
+    $('.clipper').height(clientH * 0.585);
 
     $(window).resize(function() {
       var curW = $(this).width();
       var curH = $(this).height();
-      $('.iphone_image').width(curW * scale);
+      $('.iphone_image').width(curW * 0.41);
       $('.iphone_image').height(curH * 0.95);
+
+      $('.clipper_inner').width(curW * 0.41);
+      $('.clipper_inner').height(curH * 0.95);
     });
   </script>
 </body>
