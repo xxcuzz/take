@@ -253,6 +253,7 @@ header {
   width: 40%;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  transition: padding-top 1s ease;
 
   h2 {
     font-size: 60px;
@@ -291,6 +292,9 @@ header {
   position: absolute;
   right: 15%;
   bottom: -25%;
+
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 main {
@@ -641,6 +645,12 @@ footer {
     padding-top: 20px;
     font-size: 13px;
   }
+  #spam {
+    font-size: 12px;
+    color: #57697f;
+    width: 75%;
+    padding: 0;
+  }
 }
 
 .git_block2 {
@@ -689,5 +699,35 @@ footer {
     width: 70px;
     background-color: #82ca9c;
     border-radius: 0 4px 4px 0;
+    img {
+      padding-top: 2px;
+    }
+
+  }
+}
+
+//Responsive
+@media (max-width: 1400px) {
+  .container {
+    max-width: 90%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .header_text {
+    padding-top: 40%;
+    transition: all 1s ease;
+  }
+}
+
+@media (max-width: 767px) {
+  .header_text {
+    padding-top: 60%;
+    transition: all 1s ease;
+  }
+  .iphone_image {
+    opacity: 0;
+    transition: all 0.5s ease;
   }
 }

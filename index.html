@@ -78,20 +78,15 @@
     var clientW = $(window).width();
     var clientH = $(window).height();
 
-    $('.iphone_image').width(clientW * 0.41);
+    $('.iphone_image').width(clientH *1.3836* 0.41);
     $('.iphone_image').height(clientH * 0.95);
-
-    $('.clipper').width(clientW * 0.7);
-    $('.clipper').height(clientH * 0.585);
 
     $(window).resize(function() {
       var curW = $(this).width();
       var curH = $(this).height();
-      $('.iphone_image').width(curW * 0.41);
+      $('.iphone_image').width(curH *1.3836* 0.41);
       $('.iphone_image').height(curH * 0.95);
 
-      $('.clipper_inner').width(curW * 0.41);
-      $('.clipper_inner').height(curH * 0.95);
     });
   </script>
 
@@ -300,8 +295,10 @@
             <form id="form1" action="index.html" method="post">
               <input type="email" id="mail" required>
 
-              <button type="submit" form="form1" id="submit_btn"></button>
+              <button type="submit" form="form1" id="submit_btn"><img src="images/check.png" alt=""></button>
             </form>
+            <p id="spam">We don’t send spam. Actually, who are we kiding, we’ll spam
+the shit out of you’r inbox</p>
           </div>
         </div>
       </div>
