@@ -513,35 +513,43 @@ main p {
 .buy_inner {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
-  margin-top: 100px;
+  justify-content: space-between;
+  padding-top: 100px;
 }
 
 .buy_block {
   width: 48%;
   background-color: white;
+  height: 350px;
 
   * {
     font-family: 'Open Sans', sans-serif;
+    margin-left: 40px;
   }
 
-h3 {
-      font-weight: 800;
-      border-radius: 5px;
-      color: white;
-}
+  h3 {
+    margin-top: 40px;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+    font-size: 11px;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 18px;
+    background-color: #e1e1e1;
+    //    background-color: #bd8cbf;
+  }
 
   #legacy {
-    background-color: #e1e1e1;
-
+    width: 80px;
   }
 
   #popular {
-    background-color: #bd8cbf;
+    width: 125px;
   }
 
   h2 {
+    margin-top: 20px;
     font-weight: 300;
     font-size: 30px;
     color: #2e3b4e;
@@ -552,14 +560,33 @@ h3 {
     color: #91a4b2;
   }
 
-  a{
-    font-size: 13px;
-    font-weight: bold;
+  .green_buy {
+    background-color: #82ca9c;
+    border-radius: 3px;
+    width: 152px;
+    height: 40px;
+
+    a {
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+      margin-left: 25px;
+      padding-top: 12px;
+      letter-spacing: 2px;
+    }
   }
 
-  img {
-    display: block;
+  a {
     float: left;
+    margin: 0;
+    padding: 0;
+    color: #c5c5c5;
+    font-size: 25px;
+    margin-left: -10px;
+    padding-top: 15px;
   }
 
+  #apple {
+    padding-left: 15px;
+  }
 }
