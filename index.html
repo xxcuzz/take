@@ -36,7 +36,7 @@
         </a>
 
         <div id="sidebar" onclick="openMenu()">
-          <h1 id="take" class="animation">take</h1>
+          <h1 id="take">take</h1>
           <ul id="lil_list">
             <li><a href="/">menu</a></li>
             <li><a href="/">start</a></li>
@@ -49,9 +49,18 @@
         <script>
           function openMenu() {
             var ids = ['take', 'menu-btn', 'circle_inner', 'sidebar', 'lil_list', 'dot1', 'dot2', 'dot3', 'dot4'];
+
+            if(window.innerWidth > 700){
+              ids.forEach(function(val1, val2, ids) {
+                document.getElementById(val1).classList.toggle('active');
+              });
+            }
+
+          window.onresize = function() {
             ids.forEach(function(val1, val2, ids) {
-              document.getElementById(val1).classList.toggle('active');
+              document.getElementById(val1).removeClass('active');
             });
+          }
           };
         </script>
 
