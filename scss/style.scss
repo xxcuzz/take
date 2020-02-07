@@ -315,6 +315,10 @@ main {
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 'dq bl oc gt' 'su su pp sn';
 
+
+    overflow: hidden;
+    overflow-x: scroll;
+
   * {
     color: white;
     padding-left: 22px;
